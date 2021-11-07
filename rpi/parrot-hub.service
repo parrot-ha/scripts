@@ -1,0 +1,14 @@
+[Unit]
+Description=Parrot Hub
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /opt/parrot-hub/current-parrot-hub/bin/hub
+WorkingDirectory=/opt/parrot-hub
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=parrot-hub
+
+[Install]
+WantedBy=multi-user.target
