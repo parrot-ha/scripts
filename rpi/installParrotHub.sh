@@ -25,6 +25,7 @@ parrotHubZipName=${parrotHubZipLocation##/*/}
 sudo unzip $parrotHubZipName -d /opt/parrot-hub/
 parrotHubDirectory=${parrotHubZipName%.zip}
 sudo ln -sf /opt/parrot-hub/$parrotHubDirectory /opt/parrot-hub/current-parrot-hub
+sudo chown -R parrot-hub.parrot-hub /opt/parrot-hub
 
 
 # create service to run parrot hub at boot
