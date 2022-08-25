@@ -1,2 +1,2 @@
 # scripts
-Various scripts to installing and running Parrot Hub
+Various scripts for installing and running Parrot Hub
