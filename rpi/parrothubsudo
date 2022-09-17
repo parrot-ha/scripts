@@ -1,0 +1,4 @@
+# parrot hub server commands
+Cmnd_Alias PARROT_CMDS = /bin/systemctl start parrot-hub.service, /bin/systemctl stop parrot-hub.service, /bin/systemctl status parrot-hub.service
+
+parrot-hub ALL=(ALL) NOPASSWD: PARROT_CMDS
