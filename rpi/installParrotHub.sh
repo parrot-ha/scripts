@@ -33,3 +33,9 @@ curl -L -O --remote-name https://raw.githubusercontent.com/parrot-ha/scripts/mai
 sudo cp parrot-hub.service /lib/systemd/system/parrot-hub.service
 sudo systemctl enable parrot-hub.service
 sudo systemctl start parrot-hub.service
+
+
+# add parrot-hub user to sudoers
+curl -L -O --remote-name https://raw.githubusercontent.com/parrot-ha/scripts/main/rpi/parrothubsudo
+sudo cp parrothubsudo /etc/sudoers.d/parrothubsudo
+sudo chmod 440 /etc/sudoers.d/parrothubsudo
