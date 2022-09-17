@@ -9,11 +9,11 @@ parrotHubZipLocation=`curl -sL https://api.github.com/repos/parrot-ha/hub/releas
 curl -L -O --remote-name https://github.com/${parrotHubZipLocation}
 parrotHubZipName=${parrotHubZipLocation##/*/}
 
-systemctl stop parrot-hub.service
+sudo systemctl stop parrot-hub.service
 
 unzip $parrotHubZipName -d /opt/parrot-hub/
 parrotHubDirectory=${parrotHubZipName%.zip}
-echo $parrotHubDirectory
+rm /opt/parrot-hub/current-parrot-hub
 ln -sf /opt/parrot-hub/$parrotHubDirectory /opt/parrot-hub/current-parrot-hub
 
-systemctl start parrot-hub.service
+sudo systemctl start parrot-hub.service
